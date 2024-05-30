@@ -8,7 +8,7 @@ import PhotoGallery from "@/components/PhotoGallery";
 import TitleText from "@/components/TitleText";
 import { ExifData, ExifImage } from "exif";
 
-export const getImages = (async() => {
+const getImages = (async() => {
   try {
     const images = await Promise.all(readdirSync("./public/photos").map(async (file) => {
       const imagePath = `./public/photos/${file}`
