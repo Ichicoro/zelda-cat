@@ -16,7 +16,7 @@
 }
 
 body {
-  @apply bg-orange-200;
+  @apply bg-orange-200 font-black;
   color: rgb(var(--foreground-rgb));
   /* background: linear-gradient(
       to bottom,
