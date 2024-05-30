@@ -49,7 +49,7 @@ export default async function Page() {
 
   return (
     <>
-      <TitleText title="photos" topSub="hey! these are my" />
+      <TitleText title="photos" topSub="hey! these are my" className="!mb-7" />
       <div className="flex flex-col">
         <PhotoGallery images={images} />
       </div>

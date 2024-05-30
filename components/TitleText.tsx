@@ -14,7 +14,7 @@ const TitleText: React.FunctionComponent<TitleTextProps> = ({
   bottomSub,
   className
 }: TitleTextProps) => {
-  return <div className={classNames("flex flex-row items-center w-full lg:w-auto mb-7", className)}>
+  return <div className={classNames("flex flex-row items-center w-full lg:w-auto mb-1", className)}>
     <div className={classNames("font-black text-red-900 text-2xl sm:text-3xl")}>
       <span className="text-red-950">&nbsp;{topSub}</span>
       <h1>
