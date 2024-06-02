@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const getImages = (async() => {
   try {
-    const images = await Promise.all(readdirSync("./public/photos").filter(file => file.endsWith(".jpeg") || file.endsWith("jpg")).map(async (file) => {
+    const images = (await Promise.all(readdirSync("./public/photos").filter(file => file.endsWith(".jpeg") || file.endsWith("jpg")).map(async (file) => {
       const imagePath = `./public/photos/${file}`
       const dimensions = imageSize(imagePath);
       const exifData = await new Promise((resolve, reject) => {
@@ -34,7 +34,7 @@ const getImages = (async() => {
         nonParsedDate: exifData?.exif?.DateTimeOriginal,
         date: exifData?.exif?.DateTimeOriginal ? new Date(exifData?.exif?.DateTimeOriginal.replace(":", "-").replace(":", "-")) : undefined,
       };
-    }))
+    }))).sort((a, b) => (a.date?.getTime() || 0) - (b.date?.getTime() || 0));
     return { images }
   } catch (error) {
     console.error(error);
