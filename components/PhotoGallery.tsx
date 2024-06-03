@@ -17,7 +17,7 @@ const PhotoGallery: React.FunctionComponent<PhotoGalleryProps> = ({images}: Phot
         className: "border border-[1.1rem] border-orange-100 cursor-pointer",
       },
     }}
-    breakpoints={[100, 300, 1280]}
+    breakpoints={[100, 900, 1280]}
     // defaultContainerWidth={1200}
     onClick={(photo) => {
       console.log(photo);
