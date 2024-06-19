@@ -18,7 +18,7 @@ export default function RootLayout({
         <link rel="icon" href="favicon.ico" type="*" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <link rel="mask-icon" href="favicon.svg" color="#000000"></link>
-        <meta name="darkreader-lock">
+        <meta name="darkreader-lock" />
       </head>
       <body className={vcHoney.className}>
         <main className={"p-7 sm:p-10 text-red-950 bg-orange-200 font-vc-honey font-bold text-xl gap-5"}>
